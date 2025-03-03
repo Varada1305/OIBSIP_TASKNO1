@@ -1,0 +1,107 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Calculator container */
+.calculator {
+    background-color: #2c3e50; /* Dark blue shade */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Display input */
+#display {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    font-size: 32px; 
+    padding: 10px;
+    background-color: #34495e; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+/* Button styling */
+button {
+    padding: 20px;
+    font-size: 20px; /* Font size in pixels */
+    background-color: #2980b9; 
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;  
+    box-sizing: border-box; 
+}
+
+/* Button active state */
+button:active {
+    background-color: #3498db; 
+}
+
+/* Operator buttons */
+button.operator {
+    background-color: #16a085; 
+}
+
+button.operator:active {
+    background-color: #1abc9c; 
+}
+
+/* Equals button */
+button.equals {
+    background-color: #27ae60; 
+    grid-column: span 2; 
+}
+
+button.equals:active {
+    background-color: #2ecc71; 
+}
+
+button.special {
+    background-color: #e67e22; /* Orange for special buttons */
+}
+
+button.special:active {
+    background-color: #f39c12; 
+}
+
+
+@media (max-width: 400px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    button {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+        padding: 18px;
+    }
+
+    #display {
+        font-size: 28px; /* Adjusted font size for smaller screens */
+    }
+}
